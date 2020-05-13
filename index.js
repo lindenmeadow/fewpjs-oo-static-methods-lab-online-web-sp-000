@@ -11,7 +11,7 @@ class Formatter {
 
   static titleize(str){
     const exceptions = ['the','a','an','but','of','and','for','at','by','from']
-    let newStr = str.charAt(0).toUpperCase() + string.slice(1);
+    let newStr = str.charAt(0).toUpperCase() + str.slice(1);
     return newStr.replace(/\b(\w*)/gim, function(x){
       return (exceptions.includes(x)) ? x : (x.charAt(0).toUpperCase() + x.slice(1))
     });
