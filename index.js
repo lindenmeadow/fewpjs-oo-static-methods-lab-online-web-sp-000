@@ -9,11 +9,11 @@ class Formatter {
     return str.replace(/[^a-z\s\'\"\-]/gi,"")
   }
 
-  static titleize(string){
+  static titleize(str){
     const exceptions = ['the','a','an','but','of','and','for','at','by','from']
-    let newstring = string.charAt(0).toUpperCase() + string.slice(1);
-    return newstring.replace(/\b(\w*)/gim, function(x){
-      return (exceptionalWords.includes(x)) ? x : (x.charAt(0).toUpperCase() + x.slice(1))
+    let newStr = str.charAt(0).toUpperCase() + string.slice(1);
+    return newStr.replace(/\b(\w*)/gim, function(x){
+      return (exceptions.includes(x)) ? x : (x.charAt(0).toUpperCase() + x.slice(1))
     });
   }
 }
